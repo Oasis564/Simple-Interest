@@ -1,17 +1,14 @@
-def Sum(num1, num2):
-    result = num1 + num2
-    return result
+# Find the formula for simple interest
 
-def double(num1):
-    x = num1*2
-    return x
+# SI = (Principal × Rate × Time)/100
 
-result = Sum(5,8)
-x = double(6)
+# Write the code to find the simple interest
 
-print(result)
+principle = float(input("Enter the principle"))
+rate = float(input("Enter the rate"))
+time = float(input("Enter the time"))
 
-print(x)
+si = (principle*rate*time)/100
+print("The total amount is £",si,".")
 
-def Names():
-    
+# Convert the above into a function
