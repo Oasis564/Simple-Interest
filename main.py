@@ -13,16 +13,9 @@
 
 # # Convert the above into a function
 
-# def Sinterest(principle, rate, time):
-#     principle = float(input("Enter the principle"))
-#     rate = float(input("Enter the rate"))
-#     time = float(input("Enter the time"))
-#     si = (principle*rate*time)/100
-#     return si
 
-# si = print("The resulted simple interest amount is £",Sinterest(100,166,113))
 
-# print(si)
+
 
 # # Find the formula for Compound Interest
 
@@ -51,6 +44,22 @@
 
 # Make the above into a function
 
+def Sinterest(principle, rate, time):
+    principle = float(input("Enter the principle"))
+    rate = float(input("Enter the rate"))
+    time = float(input("Enter the time"))
+    si = (principle*rate*time)/100
+    return si
+
+principle = float(input("Enter the principle"))
+rate = float(input("Enter the rate"))
+time = float(input("Enter the time"))
+
+si = Sinterest(principle,rate,time)
+print("The resulted simple interest amount is £", si)
+
+print("========================================================")
+
 
 def CDinterest(p, r, n, t):
     a = p * (1 + (r / n)) ** (n * t)
@@ -64,3 +73,14 @@ n = float(input("Enter the number of times the interest has been compound"))
 t = float(input("Enter the time"))
 a = CDinterest(p,r,n,t)
 print("The resulted compound interest amount is £", a)
+
+
+
+if(a > si):
+    print("Compound interest is better.")
+    print("You have saved: ", a-si)
+else:
+    print("Simple interest is better.")
+    print("You have saved: ", si-a)
+
+# Write a program to check if the simple interest or compound interest is better.
